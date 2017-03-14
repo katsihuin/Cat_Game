@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>Cat´s Game</title>
+
+  <!-- CSS enlaces -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body class="text-center">
+	<header>
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+							data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#">Inicio</a></li>
+						<li><a href="#">Historial</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	<section id="saludo" class="visible">
+		<div class="content">
+			<div class="container">
+
+				<h1>Bienvenido a Gato Loco!</h1>
+				<button id="btn-saludo">Iniciar juego</button>
+
+			</div>
+		</div>
+	</section>
+
+	<section id="nombres">
+		<div class="content">
+			<div class="container">
+				<p>Ingrese el nombre del jugador 1 <input class="form-control" type="text"></p>
+				<p>Ingrese el nombre del jugador 2 <input class="form-control" type="text"></p>
+				<p class="text-center">
+					<button id="btn-nombres">Comenzar</button>
+				</p>
+			</div>
+		</div>
+	</section>
+
+	<section id="juego">
+		<div class="content">
+			<div class="container">
+				<h2>Juego</h2>
+			</div>
+			<div id="tic-tac-toe">
+				<div class="row">
+					<h1 class="span3">Tic Tac Toe</h1>
+					<ul class="row" id="game">
+						<li id="one" class="btn span1" >+</li>
+						<li id="two" class="btn span1">+</li>
+						<li id="three" class="btn span1">+</li>
+						<li id="four" class="btn span1">+</li>
+						<li id="five" class="btn span1">+</li>
+						<li id="six" class="btn span1">+</li>
+						<li id="seven" class="btn span1">+</li>
+						<li id="eight" class="btn span1">+</li>
+						<li id="nine" class="btn span1">+</li>
+					</ul>
+					<div class="clr">&nbsp;</div>
+					<div class="row"><a href="#" id="reset" class="btn-success btn span3" >Restart</a></div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="historial">
+		<div class="content">
+			<div class="container">
+				<h2>Historial</h2>
+			</div>
+		</div>
+	</section>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>			
+</body>
+</html>
