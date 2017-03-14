@@ -7,8 +7,8 @@
 
   <!-- CSS enlaces -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-	<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+	<!--<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">-->
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/common.css">
 	<link rel="stylesheet" href="css/main.css">
@@ -29,7 +29,7 @@
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav navbar-right">
 						<li><a href="#">Inicio</a></li>
-						<li><a href="#">Historial</a></li>
+						<li><a href="#" id="btn-historial">Historial</a></li>
 					</ul>
 				</div>
 			</div>
@@ -89,11 +89,21 @@
 		<div class="content">
 			<div class="container">
 				<h2>Historial</h2>
+				<ul id="gameList" class="list-group"></ul>
 			</div>
 		</div>
 	</section>
 	
+	<section id="historial-comments">
+		<div class="content">
+			<div class="container">
+				<h2>Comentarios</h2>
+				<ul class="list-group"></ul>
+			</div>
+		</div>
+	</section>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>			
 </body>
