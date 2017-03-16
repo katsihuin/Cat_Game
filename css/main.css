@@ -1,7 +1,7 @@
 body {
     background-color: lightcoral;
 }
-background
+
 .visible
 {
 	opacity:1;
@@ -22,7 +22,7 @@ background
 #saludo h1
 {
 	margin-bottom:120px;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Gloria Hallelujah', cursive;
 }
 
 /*******tic-tac-toe******/
@@ -43,7 +43,7 @@ background
 #message 
 {
     font-size: 18pt;
-    font-family: 'Anatic SC', cursive;
+    font-family: 'Handlee', cursive;
 }
 #tic-tac-toe .disable {
 	text-transform:uppercase; 
