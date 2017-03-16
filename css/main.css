@@ -21,6 +21,13 @@
 }
 
 /*******tic-tac-toe******/
+.Square {
+    height:80px;
+    width: 80px;
+    font-size: 45pt;
+    text-align: center;
+}
+
 #tic-tac-toe .disable {
 	text-transform:uppercase; 
 	font-size:30px; 
