@@ -1,7 +1,12 @@
 function startGame() 
 {
+	for (var i=1; i<=9; i++)
+	{
+		clearBox(i);
+	}
 	document.turn = "X";
-	setMessage(document.turn + "get to start.")
+	document.winner = null;
+	setMessage(document.turn + " get to start.")
 }
 
 function setMessage(msg)
@@ -11,7 +16,11 @@ function setMessage(msg)
 
 function nextMove(square)
 {
-	if(square.innerText=='')
+	if(document.winner!=null)
+	{
+		setMessage(document.turn + ' ya ha ganado')
+	}
+	else if(square.innerText=='')
 	{
 		square.innerText =document.turn;
 		switchTurn();
@@ -26,6 +35,7 @@ function switchTurn()
 {
 	if(checkForWinner(document.turn)){
 		setMessage("Felicitaciones " + document.turn + " ¡ganaste!")
+		document.winner = document.turn;
 	}
 	else if(document.turn == "X")
 	{
@@ -69,4 +79,9 @@ function checkRow(a, b, c, move)
 function getBox(number)
 {
 	return document.getElementById("s" + number).innerText;
+}
+
+function clearBox(number)
+{
+	document.getElementById("s" + number).innerText = "";
 }
