@@ -9,9 +9,8 @@ function init() {
 	$('#btn-nombres').click(onClickBtnNombre);
 	$('#btn-historial').click(onClickBtnHistorial);
 	$('#btn-comentar').click(onClickBtnComentar);
-
 	$('#lista-juegos').on('click', 'button', onClickBtnItemJuego);
-
+	startGame();
 
 	TweenMax.from($('#saludo h1'), 1, {marginBottom: '0px', ease: Elastic.easeOut});
 }
@@ -43,8 +42,6 @@ function onClickBtnComentar()
 {
 	enviarComentario(currentGameID, $('#name').val(), $('#content').val());
 }
-
-
 
 
 function enviarComentario(_idGame, _name, _content)

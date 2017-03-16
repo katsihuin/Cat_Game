@@ -13,7 +13,7 @@
 	<link rel="stylesheet" href="css/common.css">
 	<link rel="stylesheet" href="css/main.css">
 </head>
-<body class="text-center">
+<body onload="startGame()"class="text-center">
 	<header>
 		<nav class="navbar navbar-default">
 			<div class="container-fluid">
@@ -65,24 +65,25 @@
 				<h2>Juego</h2>
                 <table border = "1" class="text-center game-table">
                     <tr>
-                        <td class="Square">x</td>
-                        <td class="Square">o</td>
-                        <td class="Square">x</td>
+                        <td class="Square" onClick="nextMove(this)"></td>
+                        <td class="Square" onClick="nextMove(this)"></td>
+                        <td class="Square" onClick="nextMove(this)"></td>
                     </tr>
                     <tr>
-                        <td class="Square">x</td>
-                        <td class="Square">o</td>
-                        <td class="Square">x</td>
+                        <td class="Square" onClick="nextMove(this)"></td>
+                        <td class="Square" onClick="nextMove(this)"></td>
+                        <td class="Square" onClick="nextMove(this)"></td>
                     </tr>
                     <tr>
-                        <td class="Square">x</td>
-                        <td class="Square">o</td>
-                        <td class="Square">x</td>
+                        <td class="Square" onClick="nextMove(this)"></td>
+                        <td class="Square" onClick="nextMove(this)"></td>
+                        <td class="Square" onClick="nextMove(this)"></td>
                     </tr>
                 </table>
                 <div id="message">
                     message
                 </div>
+            </div>    
         </div>
 	</section>
 
@@ -109,6 +110,7 @@
 	<script src="js/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="js/main.js"></script>			
+	<script type="text/javascript" src="js/main.js"></script>	
+	<script type="text/javascript" src="js/game.js"></script>			
 </body>
 </html>
