@@ -1,3 +1,7 @@
+body {
+    background-color: lightcoral;
+}
+background
 .visible
 {
 	opacity:1;
@@ -18,16 +22,29 @@
 #saludo h1
 {
 	margin-bottom:120px;
+    font-family: 'Raleway', sans-serif;
 }
 
 /*******tic-tac-toe******/
-.Square {
+.Square 
+{
     height:80px;
     width: 80px;
     font-size: 45pt;
     text-align: center;
+    font-family: 'Comfortaa', cursive;
 }
 
+.game-table 
+{
+    margin:0 auto;
+}
+
+#message 
+{
+    font-size: 18pt;
+    font-family: 'Anatic SC', cursive;
+}
 #tic-tac-toe .disable {
 	text-transform:uppercase; 
 	font-size:30px; 
