@@ -3,15 +3,15 @@ $(document).ready(init);
 var currentSection = null;
 var currentGameID;
 
-function init() {
+function init() 
+{
 	currentSection = $('#saludo');
 	$('#btn-saludo').click(onClickBtnSaludo);
 	$('#btn-nombres').click(onClickBtnNombre);
 	$('#btn-historial').click(onClickBtnHistorial);
 	$('#btn-comentar').click(onClickBtnComentar);
+	$('#btn-inicio').click(onClickBtnInicio);
 	$('#lista-juegos').on('click', 'button', onClickBtnItemJuego);
-	startGame();
-
 	TweenMax.from($('#saludo h1'), 1, {marginBottom: '0px', ease: Elastic.easeOut});
 }
 
@@ -25,7 +25,13 @@ function onClickBtnItemJuego()
 	//getSingleGame(idGame);
 }
 
-function onClickBtnSaludo() {
+function onClickBtnInicio() 
+{
+	gotoSection('saludo');
+}
+
+function onClickBtnSaludo() 
+{
 	gotoSection('nombres');
 }
 
@@ -38,11 +44,11 @@ function onClickBtnHistorial(evt) {
 	gotoSection('historial');
 	getHistorial();
 }
+
 function onClickBtnComentar()
 {
 	enviarComentario(currentGameID, $('#name').val(), $('#content').val());
 }
-
 
 function enviarComentario(_idGame, _name, _content)
 {
@@ -56,7 +62,8 @@ function enviarComentario(_idGame, _name, _content)
 	});
 }
 
-function gotoSection(_identificadorDeSeccion) {
+function gotoSection(_identificadorDeSeccion) 
+{
 	currentSection.removeClass('visible');
 	var nextSection = $('#' + _identificadorDeSeccion);
 
@@ -66,7 +73,8 @@ function gotoSection(_identificadorDeSeccion) {
 	currentSection = nextSection;
 }
 
-function getHistorial() {
+function getHistorial() 
+{
 	$.ajax({
 		url: 'http://test-ta.herokuapp.com/games'
 	}).success(function (_data) {
@@ -117,3 +125,4 @@ function dibujarHistorial(_datos) {
 		lista.append(html);
 	}
 }
+
