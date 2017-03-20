@@ -8,6 +8,7 @@ function init()
 	currentSection = $('#saludo');
 	$('#btn-saludo').click(onClickBtnSaludo);
 	$('#btn-nombres').click(onClickBtnNombre);
+    $('#btn-register').click(onClickBtnHistorial);
 	$('#btn-historial').click(onClickBtnHistorial);
 	$('#btn-comentar').click(onClickBtnComentar);
 	$('#btn-inicio').click(onClickBtnInicio);
@@ -32,14 +33,32 @@ function onClickBtnInicio()
 
 function onClickBtnSaludo() 
 {
+    
 	gotoSection('nombres');
 }
 
-function onClickBtnNombre() {
-	gotoSection('juego');
+function onClickBtnNombre(e) 
+{
+    e.preventDefault();
+	var jugador1 = $('#jugador1').val();
+    var jugador2 = $('#jugador2').val();
+    if ((/^[a-zA-Z]+$/.test(jugador1)==true)&&(/^[a-zA-Z]+$/.test(jugador2)==true)){
+		var jugadorUno = $('#jugadoruno').val();
+		localStorage.setItem('jugador01', jugadorUno);
+		
+		var jugadorDos = $('#jugadordos').val();
+		localStorage.setItem('jugador02', jugadorDos);
+		
+         gotoSection('juego');
+	}else{
+        
+		 alert("Escribe tu nombre");
+	} 
 }
+	
 
-function onClickBtnHistorial(evt) {
+function onClickBtnHistorial(evt) 
+{
 	evt.preventDefault();
 	gotoSection('historial');
 	getHistorial();
@@ -47,6 +66,19 @@ function onClickBtnHistorial(evt) {
 
 function onClickBtnComentar()
 {
+    var name= $("#name");
+    var content = $("#content");
+    
+    var mensaje= $("#alert");
+    if(name.val()!=""){
+        mensaje.html("Tu comentario ha sido agregado exitosamente");
+        enviarComentario(currentGameID, $('#name').val(), $('#content').val());
+    }
+    else{
+        mensaje.html("Comentario inválido");
+    }
+    name.val("");
+    content.val("");
 	enviarComentario(currentGameID, $('#name').val(), $('#content').val());
 }
 
